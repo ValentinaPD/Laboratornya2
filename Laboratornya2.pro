@@ -17,9 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp \
     unit.cpp \
     classunit.cpp \
-    methodunit.cpp
+    methodunit.cpp \
+    printoperatorunit.cpp
 
 HEADERS += \
     unit.h \
     classunit.h \
-    methodunit.h
+    methodunit.h \
+    printoperatorunit.h
