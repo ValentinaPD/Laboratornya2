@@ -7,10 +7,10 @@ class PrintOperatorUnit:public Unit
 {
 public:
     PrintOperatorUnit();
-    explicit PrintOperatorUnit( const QString& text ) : m_text( text ) { }
-    QString compile( unsigned int level = 0 ) const;
+    explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }
+    std::string compile( unsigned int level = 0 ) const;
 private:
-    QString m_text;
+    std::string m_text;
 };
 
 #endif // PRINTOPERATORUNIT_H

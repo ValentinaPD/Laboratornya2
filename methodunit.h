@@ -1,18 +1,19 @@
 #ifndef METHODUNIT_H
 #define METHODUNIT_H
-#include <QString>
-#include <QVector>
-#include <QSharedPointer>
+#include <string>
+#include <vector>
+#include <memory>
+#include <cassert>
 #include "unit.h"
 
 
 class MethodUnit:public Unit
 {
 private:
-    QString m_name;
-    QString m_returnType;
+    std::string m_name;
+    std::string m_returnType;
     Flags m_flags;
-    QVector<QSharedPointer<Unit>> m_body;
+    std::vector<std::shared_ptr<Unit>>  m_body;
 public:
      enum Modifier {
      STATIC = 1,
@@ -21,10 +22,10 @@ public:
      };
 
 public:
-    MethodUnit();
-    MethodUnit( const QString& name, const QString& returnType, Flags flags ) : m_name( name ), m_returnType( returnType ), m_flags( flags ){}
-    void add( const QSharedPointer<Unit>& unit, Flags /* flags */ = 0 );
-    QString compile( unsigned int level = 0 ) const;
+    MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) : m_name( name ), m_returnType( returnType ), m_flags( flags ){}
+    void add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0 );
+    std::string compile( unsigned int level = 0 ) const override ;
+
 };
 
 #endif // METHODUNIT_H

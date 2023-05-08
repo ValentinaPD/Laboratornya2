@@ -1,17 +1,13 @@
 #include "methodunit.h"
 
-MethodUnit::MethodUnit()
-{
-
-}
-void MethodUnit::add(const QSharedPointer<Unit>& unit, Flags /* flags */  )
+void MethodUnit::add(const std::shared_ptr<Unit>& unit, Flags /* flags */  )
 {
    m_body.push_back( unit );
 }
 
-QString MethodUnit::compile( unsigned int level ) const
+std::string MethodUnit::compile( unsigned int level ) const
 {
-    QString result = generateShift( level );
+    std::string result = generateShift( level );
     if( m_flags & STATIC )
     {
         result += "static ";

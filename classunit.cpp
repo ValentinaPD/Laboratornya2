@@ -1,13 +1,14 @@
 #include "classunit.h"
 
-ClassUnit::ClassUnit()
-{
-
-}
-const QVector<QString> ClassUnit::ACCESS_MODIFIERS = { "public",
+const std::vector<std::string> ClassUnit::ACCESS_MODIFIERS = { "public",
 "protected", "private" };
 
-void ClassUnit::add( const QSharedPointer<Unit>& unit, Flags flags )
+//std::string ClassUnit::generateShift(unsigned int level ) const
+//{
+//    return  (std::sting)level;
+//}
+
+void ClassUnit::add( const std::shared_ptr<Unit>& unit, Flags flags )
 {
 
     int accessModifier = PRIVATE;
@@ -17,9 +18,9 @@ void ClassUnit::add( const QSharedPointer<Unit>& unit, Flags flags )
     }
     m_fields[accessModifier].push_back( unit );
 }
-QString ClassUnit::compile( unsigned int level )
+std::string ClassUnit::compile( unsigned int level ) const
 {
-    QString result = generateShift( level ) + "class " + m_name + " {\n";
+    std::string result = generateShift( level ) + "class " + m_name + " {\n";
     for( size_t i = 0; i < ACCESS_MODIFIERS.size(); ++i )
     {
        if( m_fields[ i ].empty() ) {

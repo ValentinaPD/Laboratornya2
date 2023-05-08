@@ -5,12 +5,12 @@ Unit::Unit()
 
 
 }
-void Unit::add(const QSharedPointer<Unit>& , Flags flags){
+void Unit::add(const std::shared_ptr<Unit>& unit, Flags flags){
     throw std::runtime_error( "Not supported" );
 }
-QString Unit::generateShift( unsigned int level ) const{
+std::string Unit::generateShift( unsigned int level ) const{
     static const auto DEFAULT_SHIFT = " ";
-     QString result;
+     std::string result;
      for( unsigned int i = 0; i < level; ++i ) {
      result += DEFAULT_SHIFT;
      }
