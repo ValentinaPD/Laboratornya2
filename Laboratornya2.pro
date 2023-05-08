@@ -18,10 +18,20 @@ SOURCES += main.cpp \
     unit.cpp \
     classunit.cpp \
     methodunit.cpp \
-    printoperatorunit.cpp
+    printoperatorunit.cpp \
+    iclassunit.cpp \
+    imethodunit.cpp \
+    iprintoperatorunit.cpp \
+    iunit.cpp \
+    iabstractfactory.cpp
 
 HEADERS += \
     unit.h \
     classunit.h \
     methodunit.h \
-    printoperatorunit.h
+    printoperatorunit.h \
+    iclassunit.h \
+    imethodunit.h \
+    iprintoperatorunit.h \
+    iunit.h \
+    iabstractfactory.h
