@@ -18,6 +18,7 @@ void ClassUnit::add( const std::shared_ptr<Unit>& unit, Flags flags )
     }
     m_fields[accessModifier].push_back( unit );
 }
+/*
 std::string ClassUnit::compile( unsigned int level ) const
 {
     std::string result = generateShift( level ) + "class " + m_name + " {\n";
@@ -35,4 +36,13 @@ std::string ClassUnit::compile( unsigned int level ) const
     }
     result += generateShift( level ) + "};\n";
     return result;
+}
+*/
+const std::string& ClassUnit::get_m_name() const
+{
+    return m_name;
+}
+const ClassUnit::Fields& ClassUnit::getFields(int i)const
+{
+    return m_fields[i];
 }

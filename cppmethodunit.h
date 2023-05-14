@@ -1,11 +1,11 @@
 #ifndef CPPMETHODUNIT_H
 #define CPPMETHODUNIT_H
+#include "methodunit.h"
 
-
-class CppMethodUnit
+class CppMethodUnit:public MethodUnit
 {
 public:
-    CppMethodUnit();
+    CppMethodUnit( const std::string& name, const std::string& returnType, Flags flags ) :MethodUnit(name,returnType,flags){}
 };
 
 #endif // CPPMETHODUNIT_H

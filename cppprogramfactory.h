@@ -1,8 +1,10 @@
 #ifndef CPPPROGRAMFACTORY_H
 #define CPPPROGRAMFACTORY_H
 #include "programfactory.h"
-
-class CppProgramFactory:ProgramFactory
+#include "cppclassunit.h"
+#include "cppmethodunit.h"
+#include "cppprintoperatorunit.h"
+class CppProgramFactory:public ProgramFactory
 {
 public:
     std::shared_ptr < ClassUnit > CreateClass(const std::string& name);

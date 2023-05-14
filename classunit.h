@@ -28,9 +28,11 @@ public:
          m_fields.resize( ACCESS_MODIFIERS.size() );
     }
     void add(const std::shared_ptr< Unit >& unit, Flags flags );
-    std::string compile( unsigned int level = 0 ) const;
+    std::string compile( unsigned int level = 0 ) const = 0;
     //~ClassUnit() = default;
 protected:
+    const std::string& get_m_name()const;
+    const Fields& getFields(int i)const;
    //std::string generateShift( unsigned int level ) const;
 };
 
