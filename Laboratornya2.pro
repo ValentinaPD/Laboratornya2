@@ -19,19 +19,21 @@ SOURCES += main.cpp \
     classunit.cpp \
     methodunit.cpp \
     printoperatorunit.cpp \
-    iclassunit.cpp \
-    imethodunit.cpp \
-    iprintoperatorunit.cpp \
-    iunit.cpp \
-    iabstractfactory.cpp
+    programfactory.cpp \
+    cppprogramfactory.cpp \
+    client.cpp \
+    cppmethodunit.cpp \
+    cppclassunit.cpp \
+    cppprintoperatorunit.cpp
 
 HEADERS += \
     unit.h \
     classunit.h \
     methodunit.h \
     printoperatorunit.h \
-    iclassunit.h \
-    imethodunit.h \
-    iprintoperatorunit.h \
-    iunit.h \
-    iabstractfactory.h
+    programfactory.h \
+    cppprogramfactory.h \
+    client.h \
+    cppmethodunit.h \
+    cppclassunit.h \
+    cppprintoperatorunit.h

@@ -5,10 +5,12 @@
 #include <iostream>
 #include <memory>
 #include <cassert>
+#include <cppprogramfactory.h>
 
 std::string generateProgram() {
+     CppProgramFactory cppProgram;
      std::string str = "MyClass";
-     ClassUnit* myClass = new ClassUnit("MyClass");
+     std::shared_ptr < ClassUnit > myClass = cppProgram.CreateClass(str);
      myClass->add(std::make_shared< MethodUnit >( "testFunc1", "void", 0 ),ClassUnit::PUBLIC);
      myClass->add(std::make_shared< MethodUnit >( "testFunc2", "void", MethodUnit::STATIC ),ClassUnit::PRIVATE);
      myClass->add(std::make_shared< MethodUnit >( "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC);
