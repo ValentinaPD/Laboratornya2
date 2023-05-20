@@ -21,19 +21,16 @@ private:
     using Fields = std::vector<std::shared_ptr<Unit>>;
     std::vector<Fields> m_fields;
 
-
-
 public:
     explicit ClassUnit( const std::string& name ) : m_name(name){
          m_fields.resize( ACCESS_MODIFIERS.size() );
     }
-    void add(const std::shared_ptr< Unit >& unit, Flags flags );
-    std::string compile( unsigned int level = 0 ) const = 0;
-    //~ClassUnit() = default;
+    void Add(const std::shared_ptr< Unit >& unit, Flags flags );
+    std::string Compile( unsigned int level = 0 ) const = 0;
+
 protected:
-    const std::string& get_m_name()const;
-    const Fields& getFields(int i)const;
-   //std::string generateShift( unsigned int level ) const;
+    const std::string& GetMName() const;
+    const Fields& GetFields(int i)const;
 };
 
 #endif // CLASSUNIT_H

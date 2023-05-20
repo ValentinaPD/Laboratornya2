@@ -1,8 +1,8 @@
 #include "cppmethodunit.h"
 
-std::string MethodUnit::compile( unsigned int level ) const
+std::string MethodUnit::Compile( unsigned int level ) const
 {
-    std::string result = generateShift( level );
+    std::string result = GenerateShift( level );
     if( m_flags & STATIC )
     {
         result += "static ";
@@ -20,8 +20,8 @@ std::string MethodUnit::compile( unsigned int level ) const
     result += " {\n";
     for( const auto& b : m_body )
     {
-        result += b->compile( level + 1 );
+        result += b->Compile( level + 1 );
     }
-    result += generateShift( level ) + "}\n";
+    result += GenerateShift( level ) + "}\n";
     return result;
 }

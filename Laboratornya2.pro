@@ -24,7 +24,11 @@ SOURCES += main.cpp \
     client.cpp \
     cppmethodunit.cpp \
     cppclassunit.cpp \
-    cppprintoperatorunit.cpp
+    cppprintoperatorunit.cpp \
+    csclassunit.cpp \
+    csmethodunit.cpp \
+    csprintoperatorunit.cpp \
+    csprogramfactory.cpp
 
 HEADERS += \
     unit.h \
@@ -36,4 +40,8 @@ HEADERS += \
     client.h \
     cppmethodunit.h \
     cppclassunit.h \
-    cppprintoperatorunit.h
+    cppprintoperatorunit.h \
+    csclassunit.h \
+    csmethodunit.h \
+    csprintoperatorunit.h \
+    csprogramfactory.h

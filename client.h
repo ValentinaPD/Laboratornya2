@@ -6,7 +6,6 @@
 class Client
 {
 private:
-   // std::string className;
 
 public:
     //Client(ProgramFactory factory);

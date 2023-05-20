@@ -10,11 +10,11 @@ private:
 public:
     using Flags = unsigned int;
     Unit();
-    virtual void add(const std::shared_ptr<Unit>& unit, Flags flags);
-    virtual std::string compile( unsigned int level = 0 ) const = 0;
+    virtual void Add(const std::shared_ptr<Unit>& unit, Flags flags);
+    virtual std::string Compile( unsigned int level = 0 ) const = 0;
     virtual ~Unit() = default;
 protected:
-    virtual std::string generateShift( unsigned int level ) const;
+    virtual std::string GenerateShift( unsigned int level ) const;
 
 
 };

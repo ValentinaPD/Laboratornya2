@@ -23,8 +23,8 @@ public:
 
 public:
     MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) : m_name( name ), m_returnType( returnType ), m_flags( flags ){}
-    void add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0 );
-    std::string compile( unsigned int level = 0 ) const override ;
+    void Add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0 );
+    std::string Compile( unsigned int level = 0 ) const override ;
 
 };
 

@@ -1,7 +1,7 @@
 #include "cppprintoperatorunit.h"
 
 
-std::string PrintOperatorUnit::compile(unsigned int level) const
+std::string PrintOperatorUnit::Compile(unsigned int level) const
 {
-    return generateShift(level) + "printf( \"" + get_m_text() + "\" );\n";
+    return GenerateShift(level) + "printf( \"" + GetMText() + "\" );\n";
 }

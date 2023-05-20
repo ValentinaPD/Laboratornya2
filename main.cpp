@@ -11,13 +11,13 @@ std::string generateProgram() {
      CppProgramFactory cppProgram;
      std::string str = "MyClass";
      std::shared_ptr < ClassUnit > myClass = cppProgram.CreateClass(str);
-     myClass->add(std::make_shared< MethodUnit >( "testFunc1", "void", 0 ),ClassUnit::PUBLIC);
-     myClass->add(std::make_shared< MethodUnit >( "testFunc2", "void", MethodUnit::STATIC ),ClassUnit::PRIVATE);
-     myClass->add(std::make_shared< MethodUnit >( "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC);
+     myClass->Add(std::make_shared< MethodUnit >( "testFunc1", "void", 0 ),ClassUnit::PUBLIC);
+     myClass->Add(std::make_shared< MethodUnit >( "testFunc2", "void", MethodUnit::STATIC ),ClassUnit::PRIVATE);
+     myClass->Add(std::make_shared< MethodUnit >( "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC);
      auto method = std::make_shared< MethodUnit >( "testFunc4", "void",MethodUnit::STATIC );
-     method->add( std::make_shared< PrintOperatorUnit >( R"(Hello, world!\n)" ) );
-     myClass->add( method, ClassUnit::PROTECTED );
-     return myClass->compile();
+     method->Add( std::make_shared< PrintOperatorUnit >( R"(Hello, world!\n)" ) );
+     myClass->Add( method, ClassUnit::PROTECTED );
+     return myClass->Compile();
 
 }
 
