@@ -9,7 +9,7 @@
 
 class MethodUnit:public Unit
 {
-private:
+protected:
     std::string m_name;
     std::string m_returnType;
     Flags m_flags;
@@ -24,7 +24,10 @@ public:
 public:
     MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) : m_name( name ), m_returnType( returnType ), m_flags( flags ){}
     void Add(const std::shared_ptr<Unit>& unit, Flags /* flags */ = 0 );
-    std::string Compile( unsigned int level = 0 ) const override ;
+    std::string Compile( unsigned int level = 0 ) const;
+    //std::string GetMName();
+    //std::string GetMReturnType();
+    //Flags GetMFlags();
 
 };
 

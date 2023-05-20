@@ -15,7 +15,7 @@ std::string generateProgram() {
      myClass->Add(std::make_shared< MethodUnit >( "testFunc2", "void", MethodUnit::STATIC ),ClassUnit::PRIVATE);
      myClass->Add(std::make_shared< MethodUnit >( "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC);
      auto method = std::make_shared< MethodUnit >( "testFunc4", "void",MethodUnit::STATIC );
-     method->Add( std::make_shared< PrintOperatorUnit >( R"(Hello, world!\n)" ) );
+    // method->Add( std::make_shared< PrintOperatorUnit >( R"(Hello, world!\n)" ) );
      myClass->Add( method, ClassUnit::PROTECTED );
      return myClass->Compile();
 
