@@ -6,15 +6,9 @@
 class PrintOperatorUnit:public Unit
 {
 public:
-    explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }
-    std::string Compile( unsigned int level = 0 ) const;
-    //virtual ~PrintOperatorUnit() = default;
-
-private:
-    std::string m_text;
+    explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }   
 protected:
-    const std::string& GetMText() const;
-    //std::string m_text;
+     std::string m_text;
 };
 
 #endif // PRINTOPERATORUNIT_H

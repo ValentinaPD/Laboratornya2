@@ -2,5 +2,5 @@
 
 std::string CsPrintOperatorUnit::Compile(unsigned int level) const
 {
-    return GenerateShift(level) + "printf( \"" + GetMText() + "\" );\n";
+    return GenerateShift(level) + "System.Out.Print( \"" + m_text + "\" );\n";
 }

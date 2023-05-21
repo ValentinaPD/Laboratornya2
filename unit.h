@@ -5,8 +5,6 @@
 #include <cassert>
 class Unit
 {
-private:
-
 public:
     using Flags = unsigned int;
     Unit();

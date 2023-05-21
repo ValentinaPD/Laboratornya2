@@ -3,7 +3,7 @@
 #include "classunit.h"
 
 
-class CsClassUnit:public ClassUnit
+class CsClassUnit final:public ClassUnit
 {
 public:
     CsClassUnit( const std::string& name ) : ClassUnit(name){}

@@ -16,7 +16,7 @@ public:
      };
 
     static const std::vector< std::string > ACCESS_MODIFIERS;
-private:
+protected:
     std::string m_name;
     using Fields = std::vector<std::shared_ptr<Unit>>;
     std::vector<Fields> m_fields;
@@ -26,11 +26,7 @@ public:
          m_fields.resize( ACCESS_MODIFIERS.size() );
     }
     void Add(const std::shared_ptr< Unit >& unit, Flags flags );
-    std::string Compile( unsigned int level = 0 ) const = 0;
 
-protected:
-    const std::string& GetMName() const;
-    const Fields& GetFields(int i)const;
 };
 
 #endif // CLASSUNIT_H

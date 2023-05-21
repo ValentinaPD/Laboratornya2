@@ -2,7 +2,7 @@
 #define CPPCLASSUNIT_H
 #include "classunit.h"
 
-class CppClassUnit:public ClassUnit
+class CppClassUnit final:public ClassUnit
 {
 public:
     CppClassUnit( const std::string& name ) : ClassUnit(name){}

@@ -15,11 +15,4 @@ void ClassUnit::Add( const std::shared_ptr<Unit>& unit, Flags flags )
     m_fields[accessModifier].push_back( unit );
 }
 
-const std::string& ClassUnit::GetMName() const
-{
-    return m_name;
-}
-const ClassUnit::Fields& ClassUnit::GetFields(int i)const
-{
-    return m_fields[i];
-}
+

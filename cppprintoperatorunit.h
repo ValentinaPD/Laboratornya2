@@ -2,11 +2,11 @@
 #define CPPPRINTOPERATORUNIT_H
 #include "printoperatorunit.h"
 
-class CppPrintOperatorUnit:public PrintOperatorUnit
+class CppPrintOperatorUnit final:public PrintOperatorUnit
 {
 public:
     CppPrintOperatorUnit( const std::string& text ) : PrintOperatorUnit( text ) { }
-    std::string Compile( unsigned int level = 0 ) const override;
+    std::string Compile( unsigned int level = 0 ) const;
 };
 
 #endif // CPPPRINTOPERATORUNIT_H
