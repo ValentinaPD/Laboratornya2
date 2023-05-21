@@ -15,13 +15,13 @@ std::string CsMethodUnit::Compile( unsigned int level ) const
     result += m_name + "()";
 
     if( m_flags & CONST ) {
-        result += " const";
+       // result += " const";
     }
-    result += " {\n";
+    result += "\n"+GenerateShift( level )+"{\n";
     for( const auto& b : m_body )
     {
         result += b->Compile( level + 1 );
     }
-    result += GenerateShift( level ) + "}\n";
+    result +=  GenerateShift( level ) + "}\n";
     return result;
 }

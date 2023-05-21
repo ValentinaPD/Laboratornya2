@@ -17,6 +17,8 @@ std::string generateProgram( const std::shared_ptr< ProgramFactory >& program ) 
      std::shared_ptr< MethodUnit > method = program->CreateMethod( "testFunc4", "void",MethodUnit::STATIC );
      method->Add( program->CreatePrintOperator( R"(Hello, world!\n)" ) );
      myClass->Add( method, ClassUnit::PROTECTED );
+     myClass->Add(program->CreateMethod( "testFunc5", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::PUBLIC);
+    // myClass->Add(program->CreateMethod( "testFunc5", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ), ClassUnit::INTERNAL);
      return myClass->Compile();
 
 }
