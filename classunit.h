@@ -12,10 +12,7 @@ public:
     enum AccessModifier {
      PUBLIC,
      PROTECTED,
-     PRIVATE,
-     INTERNAL,
-     PROTECTED_INTERNAL,
-     PRIVATE_PROTECTED
+     PRIVATE
      };
 
     static const std::vector< std::string > ACCESS_MODIFIERS;

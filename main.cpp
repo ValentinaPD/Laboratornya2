@@ -7,6 +7,7 @@
 #include <cassert>
 #include <cppprogramfactory.h>
 #include <csprogramfactory.h>
+#include <javaprogramfactory.h>
 
 std::string generateProgram( const std::shared_ptr< ProgramFactory >& program ) {
      std::string str = "MyClass";
@@ -26,7 +27,21 @@ std::string generateProgram( const std::shared_ptr< ProgramFactory >& program ) 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
+    std::cout << "=================================" << std::endl;
+    std::cout << "C# program" << std::endl;
+    std::cout << "=================================" << std::endl;
     std::cout << generateProgram(std::make_shared< CsProgramFactory >()) << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "=================================" << std::endl;
+    std::cout << "C++ program" << std::endl;
+    std::cout << "=================================" << std::endl;
     std::cout << generateProgram(std::make_shared< CppProgramFactory >()) << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "=================================" << std::endl;
+    std::cout << "Java program" << std::endl;
+    std::cout << "=================================" << std::endl;
+    std::cout << generateProgram(std::make_shared< JavaProgramFactory >()) << std::endl;
     return a.exec();
 }

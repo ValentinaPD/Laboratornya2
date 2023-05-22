@@ -21,14 +21,17 @@ SOURCES += main.cpp \
     printoperatorunit.cpp \
     programfactory.cpp \
     cppprogramfactory.cpp \
-    client.cpp \
     cppmethodunit.cpp \
     cppclassunit.cpp \
     cppprintoperatorunit.cpp \
     csclassunit.cpp \
     csmethodunit.cpp \
     csprintoperatorunit.cpp \
-    csprogramfactory.cpp
+    csprogramfactory.cpp \
+    javaclassunit.cpp \
+    javamethodunit.cpp \
+    javaprintoperatorunit.cpp \
+    javaprogramfactory.cpp
 
 HEADERS += \
     unit.h \
@@ -37,11 +40,14 @@ HEADERS += \
     printoperatorunit.h \
     programfactory.h \
     cppprogramfactory.h \
-    client.h \
     cppmethodunit.h \
     cppclassunit.h \
     cppprintoperatorunit.h \
     csclassunit.h \
     csmethodunit.h \
     csprintoperatorunit.h \
-    csprogramfactory.h
+    csprogramfactory.h \
+    javaclassunit.h \
+    javamethodunit.h \
+    javaprintoperatorunit.h \
+    javaprogramfactory.h

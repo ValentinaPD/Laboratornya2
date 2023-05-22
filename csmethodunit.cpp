@@ -14,9 +14,6 @@ std::string CsMethodUnit::Compile( unsigned int level ) const
     result += m_returnType + " ";
     result += m_name + "()";
 
-    if( m_flags & CONST ) {
-       // result += " const";
-    }
     result += "\n"+GenerateShift( level )+"{\n";
     for( const auto& b : m_body )
     {
