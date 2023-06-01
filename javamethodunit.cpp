@@ -11,6 +11,18 @@ std::string JavaMethodUnit::Compile( unsigned int level ) const
     {
         result += "virtual ";
     }
+    else if( m_flags & ABSTARCT )
+    {
+        result += "abstract ";
+    }
+    else if( m_flags & SYNCHRONIZED )
+    {
+        result += "synchronized ";
+    }
+    else if( m_flags & VOLATILE )
+    {
+        result += "volatile ";
+    }
     result += m_returnType + " ";
     result += m_name + "()";
 

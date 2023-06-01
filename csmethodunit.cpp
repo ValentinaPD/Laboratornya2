@@ -11,6 +11,14 @@ std::string CsMethodUnit::Compile( unsigned int level ) const
     {
         result += "virtual ";
     }
+    else if( m_flags & ABSTARCT )
+    {
+        result += "abstract ";
+    }
+    else if( m_flags & EXTERN )
+    {
+        result += "extern ";
+    }
     result += m_returnType + " ";
     result += m_name + "()";
 

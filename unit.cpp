@@ -1,10 +1,5 @@
 #include "unit.h"
 
-Unit::Unit()
-{
-
-
-}
 void Unit::Add(const std::shared_ptr<Unit>& unit, Flags flags){
     throw std::runtime_error( "Not supported" );
 }

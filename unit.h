@@ -7,7 +7,6 @@ class Unit
 {
 public:
     using Flags = unsigned int;
-    Unit();
     virtual void Add(const std::shared_ptr<Unit>& unit, Flags flags);
     virtual std::string Compile( unsigned int level = 0 ) const = 0;
     virtual ~Unit() = default;

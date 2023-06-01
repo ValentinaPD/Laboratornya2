@@ -18,7 +18,11 @@ public:
      enum Modifier {
      STATIC = 1,
      CONST = 1 << 1,
-     VIRTUAL = 1 << 2
+     VIRTUAL = 1 << 2,
+     ABSTARCT = 1 << 3,
+     EXTERN = 1 << 4,
+     SYNCHRONIZED = 1 << 5,
+     VOLATILE = 1 << 6
      };
 
 public:

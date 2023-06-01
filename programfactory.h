@@ -4,6 +4,7 @@
 #include "methodunit.h"
 #include "printoperatorunit.h"
 #include "unit.h"
+#include <memory>
 class ProgramFactory
 {
 public:
